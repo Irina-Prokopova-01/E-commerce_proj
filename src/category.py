@@ -1,4 +1,6 @@
 class Category:
+    """Класс представления категории продуктов."""
+
     name: str
     description: str
     products: list
@@ -12,6 +14,3 @@ class Category:
 
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
-
-
-
