@@ -2,7 +2,7 @@ def test_user_init(category_product_1, category_product_2):
     assert category_product_1.name == "Смартфоны"
     assert (
         category_product_1.description
-        == "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни"
+        == "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций"
     )
     assert category_product_1.products == [
         {
@@ -16,7 +16,7 @@ def test_user_init(category_product_1, category_product_2):
     assert category_product_2.name == "Телевизоры"
     assert (
         category_product_2.description
-        == "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом и помощником"
+        == "Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом"
     )
     assert category_product_2.products == [
         {
