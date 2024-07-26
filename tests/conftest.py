@@ -20,10 +20,14 @@ def second_product():
         name='55" QLED 4K', description="Фоновая подсветка", price=123000.0, quantity=7
     )
 
+
 @pytest.fixture
 def three_product():
     return Product(
-        name='Смартфоны', description="Смартфоны, как средство не только коммуникации, но и получение дополнительных функций", price=180000.0, quantity=5
+        name="Смартфоны",
+        description="Смартфоны, как средство не только коммуникации, но и получение дополнительных функций",
+        price=180000.0,
+        quantity=5,
     )
 
 

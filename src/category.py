@@ -18,7 +18,6 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
-
     @property
     def products(self):
         products_str = ""
@@ -26,12 +25,10 @@ class Category:
             products_str += f"{product.name}, {product.description}, {product.price}, {product.quantity}\n"
         return products_str
 
-
     def add_product(self, product: Product):
         self.__products = []
         self.__products.append(product)
         Category.product_count += 1
-
 
     @property
     def get_product(self):

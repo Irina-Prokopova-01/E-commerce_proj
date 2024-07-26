@@ -1,5 +1,6 @@
 class Product:
     """Класс представления продукта."""
+
     name: str
     description: str
     price: float
@@ -10,7 +11,6 @@ class Product:
         self.description = description
         self.__price = price
         self.quantity = quantity
-
 
     @property
     def price(self):
@@ -23,7 +23,6 @@ class Product:
         else:
             self.__price = value
 
-
     @classmethod
     def new_product(cls, new_product: dict):
         """Взвращает созданный объект класса Product из параметров товара в словаре"""
@@ -32,4 +31,3 @@ class Product:
         price = new_product["price"]
         quantity = new_product["quantity"]
         return cls(name, description, price, quantity)
-

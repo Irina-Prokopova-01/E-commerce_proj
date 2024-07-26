@@ -1,5 +1,3 @@
-from src.product import Product
-
 def test_first_product_init(first_product, second_product):
     assert first_product.name == "Samsung Galaxy C23 Ultra"
     assert first_product.description == "256GB, Серый цвет, 200MP камера"
@@ -19,9 +17,8 @@ def test_first_product_init(first_product, second_product):
 #     assert product_new.price == <src.product.Product object at 0x0000026FFF5E3980>
 #     assert product_new.quantity == <src.product.Product object at 0x0000026FFF5E3980>
 
+
 def test_product_price(first_product, capsys):
     first_product.price = 0
     message = capsys.readouterr()
     assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
-
-
