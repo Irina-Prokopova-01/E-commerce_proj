@@ -23,7 +23,6 @@ class Category:
     def products(self):
         return self.__products
 
-    @products.setter
     def add_product(self, product: Product):
         self.__products = []
         self.__products.append(product)
