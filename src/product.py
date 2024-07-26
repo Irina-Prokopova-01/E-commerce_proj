@@ -29,3 +29,5 @@ class Product:
     def price(self, value):
         if self.__price <= 0:
             print("Цена не должна быть нулевая или отрицательная")
+        else:
+            self.__price = value

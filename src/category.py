@@ -40,3 +40,7 @@ class Category:
             product_str += f"{product['name']}, {product['price']} руб. Остаток: {product['quantity']} шт."
 
         return product_str
+
+    @property
+    def products_(selfs):
+        return selfs.__products
