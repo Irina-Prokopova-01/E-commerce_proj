@@ -42,5 +42,5 @@ class Category:
         return product_str
 
     @property
-    def products_(selfs):
-        return selfs.__products
+    def products_(self):
+        return self.__products

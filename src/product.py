@@ -10,16 +10,7 @@ class Product:
         self.description = description
         self.__price = price
         self.quantity = quantity
-        pass
 
-    @classmethod
-    def new_product(cls, new_product: dict):
-        """Взвращает созданный объект класса Product из параметров товара в словаре"""
-        name = new_product["name"]
-        description = new_product["description"]
-        price = new_product["price"]
-        quantity = new_product["quantity"]
-        return cls(name, description, price, quantity)
 
     @property
     def price(self):
@@ -31,3 +22,14 @@ class Product:
             print("Цена не должна быть нулевая или отрицательная")
         else:
             self.__price = value
+
+
+    @classmethod
+    def new_product(cls, new_product: dict):
+        """Взвращает созданный объект класса Product из параметров товара в словаре"""
+        name = new_product["name"]
+        description = new_product["description"]
+        price = new_product["price"]
+        quantity = new_product["quantity"]
+        return cls(name, description, price, quantity)
+
