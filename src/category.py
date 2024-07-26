@@ -18,9 +18,6 @@ class Category:
         Category.category_count += 1
         Category.product_count += len(products) if products else 0
 
-    @property
-    def products(self):
-        return self.__products
 
     @property
     def products(self):
