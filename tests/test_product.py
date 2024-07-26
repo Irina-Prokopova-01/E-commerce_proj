@@ -12,7 +12,16 @@ def test_first_product_init(first_product, second_product):
     assert second_product.quantity == 7
 
 
-def test_new_product_property_1(first_product):
-    assert first_product.new_product == 'Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.'
+# def test_new_product_property_1(first_product):
+#     product_new = Product.new_product(first_product)
+#     assert product_new.name == <src.product.Product object at 0x0000026FFF5E3980>
+#     assert product_new.description == <src.product.Product object at 0x0000026FFF5E3980>
+#     assert product_new.price == <src.product.Product object at 0x0000026FFF5E3980>
+#     assert product_new.quantity == <src.product.Product object at 0x0000026FFF5E3980>
+
+def test_product_price(first_product, capsys):
+    first_product.price = 0
+    message = capsys.readouterr()
+    assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
 
 

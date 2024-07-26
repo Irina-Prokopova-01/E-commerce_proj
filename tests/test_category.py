@@ -50,6 +50,10 @@ def test_products_property(category_product_2):
     assert category_product_2.products_ == [{'description': 'Фоновая подсветка', 'name': '55" QLED 4K', 'price': 123000.0, 'quantity': 7}]
 
 
-def test_add_product(product):
-    product = Product("55\" QLED 4K", "Фоновая подсветка", 123000.0, 7)
-    assert product.add_product == '"55\" QLED 4K", "Фоновая подсветка", 123000.0, 7'
+def test_add_product(category_product_1, three_product):
+    category_product_1.add_product(three_product)
+    len(category_product_1.products_list) == 1
+    for product in category_product_1.products_list:
+        assert product.name == "Смартфоны"
+        assert product.price == 180000.0
+        assert product.quantity == 5
