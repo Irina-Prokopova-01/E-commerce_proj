@@ -18,10 +18,11 @@ class Product:
 
     @price.setter
     def price(self, value):
-        if self.__price <= 0:
+        if value <= 0:
             print("Цена не должна быть нулевая или отрицательная")
         else:
             self.__price = value
+            return value
 
     @classmethod
     def new_product(cls, new_product: dict):

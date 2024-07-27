@@ -17,7 +17,7 @@ def first_product():
 @pytest.fixture
 def second_product():
     return Product(
-        name='55" QLED 4K', description="Фоновая подсветка", price=123000.0, quantity=7
+        name="55 QLED 4K", description="Фоновая подсветка", price=123000.0, quantity=7
     )
 
 

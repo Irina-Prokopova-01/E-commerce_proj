@@ -20,24 +20,27 @@ class Category:
 
     @property
     def products(self):
-        products_str = ""
-        for product in self.__products:
-            products_str += f"{product.name}, {product.description}, {product.price}, {product.quantity}\n"
-        return products_str
-
-    def add_product(self, product: Product):
-        self.__products = []
-        self.__products.append(product)
-        Category.product_count += 1
-
-    @property
-    def get_product(self):
         product_str = ""
         for product in self.__products:
-            product_str += f"{product['name']}, {product['price']} руб. Остаток: {product['quantity']} шт."
+            product_str += f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
 
         return product_str
 
     @property
-    def products_(self):
+    def products_list(self):
         return self.__products
+
+    def add_product(self, product: Product):
+        self.__products.append(product)
+        Category.product_count += 1
+
+    #
+    # def add_product(self, product: Product):
+    #     for item in self.__products:
+    #         if item.name == product.name:
+    #             item.quantity += product.quantity
+    #             if item.price < product.price:
+    #                 item.price = product.price
+    #             return
+    #     self.__products.append(product)
+    #     Category.product_count += 1
