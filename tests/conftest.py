@@ -61,3 +61,11 @@ def category_product_2():
             }
         ],
     )
+
+@pytest.fixture
+def product_dict():
+    return {"name": "new_product", "description": "product fot test new_product", "price": 1.0, "quantity": 10}
+
+@pytest.fixture
+def product_str_fixt():
+    return Product(name="Холодильник", description="Холодильник LG", price=30000, quantity=5)

@@ -1,3 +1,5 @@
+from src.category import Category
+
 def test_user_init(category_product_1, category_product_2):
     assert category_product_1.name == "Смартфоны"
     assert (
@@ -69,3 +71,18 @@ def test_add_product(category_product_1, three_product):
         assert three_product.name == "Смартфоны"
         assert three_product.price == 180000.0
         assert three_product.quantity == 5
+
+
+# def test_products_getter(category_product_2):
+#     products_str = Category.products(category_product_2)
+#     assert products_str.products ==
+
+def test_products_property_(category_product_2):
+    assert category_product_2.products == [
+        {
+            "description": "Фоновая подсветка",
+            "name": '55" QLED 4K',
+            "price": 123000.0,
+            "quantity": 7,
+        }
+    ]
