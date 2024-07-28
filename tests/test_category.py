@@ -64,7 +64,7 @@ def test_products_list_property_2(category_product_2):
 
 def test_add_product(category_product_1, three_product):
     category_product_1.add_product(three_product)
-    len(category_product_1.products_list) == 1
+    # len(category_product_1.products_list) == 1
     for product in category_product_1.products_list:
         assert three_product.name == "Смартфоны"
         assert three_product.price == 180000.0

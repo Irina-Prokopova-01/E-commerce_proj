@@ -24,5 +24,10 @@ def test_product_price_0(first_product, capsys):
     assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
 
 
-def test_product_price_setter(first_product):
-    assert first_product.price.setter == 180000.0
+def test_product_price_setter_1(first_product):
+    first_product.price = 180000.0
+    assert first_product.price == 180000.0
+
+def test_product_price_setter_2(second_product):
+    second_product.price = 123000.0
+    assert second_product.price == 123000.0
