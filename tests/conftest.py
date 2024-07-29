@@ -32,34 +32,20 @@ def three_product():
 
 
 @pytest.fixture
-def category_product_1():
+def category_product_1(first_product, second_product):
     return Category(
         name="Смартфоны",
         description="Смартфоны, как средство не только коммуникации, но и получение дополнительных функций",
-        products=[
-            {
-                "name": "Samsung Galaxy C23 Ultra",
-                "description": "256GB, Серый цвет, 200MP камера",
-                "price": 180000.0,
-                "quantity": 5,
-            }
-        ],
+        products=[first_product, second_product],
     )
 
 
 @pytest.fixture
-def category_product_2():
+def category_product_2(first_product, second_product):
     return Category(
         name="Телевизоры",
         description="Современный телевизор, который позволяет наслаждаться просмотром, станет вашим другом",
-        products=[
-            {
-                "name": '55" QLED 4K',
-                "description": "Фоновая подсветка",
-                "price": 123000.0,
-                "quantity": 7,
-            }
-        ],
+        products=[first_product, second_product],
     )
 
 
