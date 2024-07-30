@@ -66,3 +66,7 @@ def test_products_property_(category_product_2):
         category_product_2.products
         == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.\n55 QLED 4K, 123000.0 руб. Остаток: 7 шт.\n"
     )
+
+
+def test_category_str(category_product_2):
+    assert str(category_product_2) == "Телевизоры, количество продуктов: 2 шт."

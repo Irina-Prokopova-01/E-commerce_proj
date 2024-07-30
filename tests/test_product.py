@@ -41,3 +41,11 @@ def test_new_product_clss(product_dict):
 
 def test_price_property_1(first_product):
     assert first_product.price == 180000.0
+
+
+def test_product_str(second_product):
+    assert str(second_product) == "55 QLED 4K, 123000.0 руб. Остаток: 7 шт."
+
+
+def test_product_add_1_2(first_product, second_product):
+    assert first_product + second_product == 1761000.0
