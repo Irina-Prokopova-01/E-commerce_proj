@@ -1,7 +1,10 @@
-from src.product import Product
 from src.category import Category
+from src.product import Product
+
 
 class Iterator:
+    """Вспомогательный класс, с помощью которого можно перебирать товары одной категории"""
+
     def __init__(self, category_obj):
         self.category = category_obj
         self.index = 0
