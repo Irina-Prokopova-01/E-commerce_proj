@@ -1,6 +1,7 @@
 import pytest
 
 from src.category import Category
+from src.iterator import Iterator
 from src.product import Product
 
 
@@ -64,3 +65,8 @@ def product_str_fixt():
     return Product(
         name="Холодильник", description="Холодильник LG", price=30000, quantity=5
     )
+
+
+@pytest.fixture
+def product_iterator(category_product_2):
+    return Iterator(category_product_2)
