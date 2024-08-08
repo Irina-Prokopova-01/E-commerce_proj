@@ -44,7 +44,6 @@ class Category:
         else:
             raise TypeError
 
-
     #
     # def add_product(self, product: Product):
     #     for item in self.__products:
