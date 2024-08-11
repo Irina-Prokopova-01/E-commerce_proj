@@ -50,8 +50,8 @@ def test_user_init(category_product_1, category_product_2):
 
 def test_products_list_property_2(category_product_2):
     assert (
-        category_product_2.products_list
-        == "Samsung Galaxy C23 Ultra, 180000.0 руб. Остаток: 5 шт.\n55 QLED 4K, 123000.0 руб. Остаток: 7 шт.\n"
+        category_product_2.products_list[-1]
+        == "Product(55 QLED 4K, Фоновая подсветка 123000.0 7)"
     )
 
 

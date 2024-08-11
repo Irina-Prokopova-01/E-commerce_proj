@@ -3,6 +3,7 @@ from src.product import Product
 
 class Smartphone(Product):
     """Класс описывает смартфоны. Родительский класс - Product"""
+
     def __init__(
         self, name, description, price, quantity, efficiency, model, memory, color
     ):
