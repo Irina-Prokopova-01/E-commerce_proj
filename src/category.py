@@ -44,13 +44,13 @@ class Category:
         else:
             raise TypeError
 
-    #
-    # def add_product(self, product: Product):
-    #     for item in self.__products:
-    #         if item.name == product.name:
-    #             item.quantity += product.quantity
-    #             if item.price < product.price:
-    #                 item.price = product.price
-    #             return
-    #     self.__products.append(product)
-    #     Category.product_count += 1
+    def middle_price(self):
+        try:
+            total_price = 0
+            total_quantity = 0
+            for product in self.__products:
+                total_price += product.price * product.quantity
+                total_quantity += product.quantity
+            return total_price / total_quantity
+        except ZeroDivisionError:
+            return 0

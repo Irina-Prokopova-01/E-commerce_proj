@@ -124,3 +124,11 @@ def lanwgrass_2():
 @pytest.fixture
 def fake_product():
     return "fake_product"
+
+
+@pytest.fixture
+def category_without_products():
+    return Category(
+        name="Смартфоны-1",
+        description="Смартфоны-1, как средство не только коммуникации, но и получение дополнительных функций",
+    )

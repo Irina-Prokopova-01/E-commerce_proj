@@ -1,3 +1,5 @@
+import pytest
+
 from src.product import Product
 
 
@@ -49,3 +51,13 @@ def test_product_str(second_product):
 
 def test_product_add_1_2(first_product, second_product):
     assert first_product + second_product == 1761000.0
+
+
+def test_product_zero_quantity():
+    with pytest.raises(ValueError):
+        product = Product(
+            name="Samsung Galaxy C23 Ultra",
+            description="256GB, Серый цвет, 200MP камера",
+            price=180000.0,
+            quantity=0,
+        )
