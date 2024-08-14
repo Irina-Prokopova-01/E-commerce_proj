@@ -78,3 +78,8 @@ def test_category_str(category_product_2):
 def test_add_category_not_product(category_product_1, fake_product):
     with pytest.raises(TypeError):
         category_product_1.add_product(fake_product)
+
+
+def test_middel_price(category_product_2, category_without_products):
+    assert category_product_2.middle_price() == 146750.0
+    assert category_without_products.middle_price() == 0
