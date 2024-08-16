@@ -1,20 +1,30 @@
 from src.base_product_list import BaseProductList
-from src.product import Product
 from src.exseption import ExceptionQuantity
+from src.product import Product
 
 
 class Order(BaseProductList):
     """Класс описывает заказ продуктов. В заказе может содержаться только один вид продуктов,
     возможно изменение количества единиц продукта в заказе. При попытке изменения либо добавления продукта поднимается ошибка.
-    Выводит суммарную стоимость за единицы продукта в заказе. Родительский класс - BaseProductList."""
+    Выводит суммарную стоимость за единицы продукта в заказе. Родительский класс - BaseProductList.
+    """
 
     product: Product
     quantity: int
 
     def __init__(self, product, quantity):
-        self.__products = product
+        self.__product = product
         self.__total_price = 0
-
+        try:
+            if quantity == 0:
+                raise ExceptionQuantity
+        except ExceptionQuantity as e:
+            print(e)
+        else:
+            self.__quantity = quantity
+            print("Товар успешно добавлен в заказ")
+        finally:
+            print("Обработка добавления товара в заказ закончена")
 
     @property
     def products(self):

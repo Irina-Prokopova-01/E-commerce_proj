@@ -15,7 +15,6 @@ def data_from_json(filename: str) -> List[Dict[str, Any]]:
     return data_json
 
 
-
 def objects_from_data(data: List[Dict]) -> List:
     categories = []
     for category in data:
@@ -27,7 +26,6 @@ def objects_from_data(data: List[Dict]) -> List:
         # print(products_list)
     # print(categories)
     return categories
-
 
 
 if __name__ == "__main__":
